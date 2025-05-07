@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 const Home = () => <div className="p-4">Home Page</div>
 const CatsPage = () => <div className="p-4">Cats Page</div>
@@ -22,6 +23,7 @@ function App() {
                         <Route path="/matcher" element={<MatcherPage/>}/>
                     </Routes>
                 </main>
+                <Footer />
             </div>
         </Router>
     )

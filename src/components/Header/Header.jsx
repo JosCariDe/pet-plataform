@@ -1,14 +1,10 @@
 
-import { Link, useLocation, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { FaPaw } from 'react-icons/fa';
 
 const Header = () => {
 
-    const location = useLocation();
 
-    const linkClass = (isActive, isPending) => {
-        isPending ? "pending": isActive ? "text-blue-300 font-bold border-b-2 border-blue-300 text-decoration-line: underline": "";
-    }
 
     return (
         <header className="bg-gray-600 text-white p-4 shadow-md" >
