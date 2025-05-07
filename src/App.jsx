@@ -2,9 +2,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import CatsPage from "./pages/CatsPage";
+
 
 const Home = () => <div className="p-4">Home Page</div>
-const CatsPage = () => <div className="p-4">Cats Page</div>
 const DogsPage = () => <div className="p-4">Dogs Page</div>
 const FavoritesPage = () => <div className="p-4">Favorites Page</div>
 const MatcherPage = () => <div className="p-4">Matcher Page</div>

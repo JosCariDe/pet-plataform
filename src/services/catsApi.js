@@ -10,18 +10,18 @@ const CAT_API_URL = 'https://api.thecatapi.com/v1';
 // 3. Función para obtener todas las razas de gatos
 export const getAllCatBreeds = async () => {
 
-    url = `${CAT_API_URL}/breeds`;
-    mensajeError = "Error fetching dog breed";
+    const url = `${CAT_API_URL}/breeds`;
+    const mensajeError = "Error fetching cat breed";
     
-    peticionesfetch(url,CAT_API_KEY,mensajeError);
+    return peticionesfetch(url,CAT_API_KEY,mensajeError);
 
 };
 
 // 9. Función para obtener imágenes de una raza específica
 export const getCatImagesByBreed = async (breedId) => {
 
-    url = `${CAT_API_URL}/images/search?breed_ids=${breedId}&limit=10`;
-    mensajeError = 'Error fetching cat images';
-    peticionesfetch(url,CAT_API_KEY,mensajeError);
+    const url = `${CAT_API_URL}/images/search?breed_ids=${breedId}&limit=10`;
+    const mensajeError = 'Error fetching cat images';
+    return peticionesfetch(url,CAT_API_KEY,mensajeError);
     
 };

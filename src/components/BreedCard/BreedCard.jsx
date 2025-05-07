@@ -1,8 +1,7 @@
 
 
-const BreedCard = (props) => {
+const BreedCard = ({name, origin , description, image}) => {
 
-    const {name, origin , description, image} = props;
 
 
     return (
