@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import BreedCard from "../components/BreedCard/BreedCard";
 import { getAllCatBreeds } from "../services/catsApi";
 import { getAllDogBreeds } from "../services/dogsApi";
+import BreedCardSkeleton from "../components/BreedCard/BreedCardSkeleton";
 
 const DogsPage = () =>{
 
@@ -35,8 +36,13 @@ const DogsPage = () =>{
 
     if (loading) {
         return (
-          <div className="flex justify-center items-center h-64">
-            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
+          <div className="p-4">
+            <h1 className="text-2xl font-bold mb-4">Razas de Perros</h1>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {[...Array(6)].map((_, index) => (
+                    <BreedCardSkeleton key={index} />
+                ))}
+            </div>
           </div>
         );
       }
