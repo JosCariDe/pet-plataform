@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import CatsPage from "./pages/CatsPage";
-import DogsPage from "./pages/DogsPage"
+import DogsPage from "./pages/DogsPage";
+
 
 const Home = () => <div className="p-4">Home Page</div>
 const FavoritesPage = () => <div className="p-4">Favorites Page</div>
