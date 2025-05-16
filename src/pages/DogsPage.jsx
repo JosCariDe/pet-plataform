@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import BreedCard from "../components/BreedCard/BreedCard";
-import { getAllCatBreeds } from "../services/catsApi";
+import { getAllDogBreeds } from "../services/dogsApi";
 import BreedCardSkeleton from "../components/BreedCard/BreedCardSkeleton";
 
-const CatsPage = () =>{
+const DogsPage = () =>{
 
     const [searchTerm, setSearchTerm] = useState('');
     const [breeds, setBreeds] = useState([]);
@@ -15,11 +15,11 @@ const CatsPage = () =>{
         const fetchBreeds = async () => {
             try {
                 setLoading(true);
-                const data = await getAllCatBreeds();
+                const data = await getAllDogBreeds();
                 setBreeds(data);
                 setError(null);
             } catch (err) {
-                setError('Error al cargar las razas de gatos');
+                setError('Error al cargar las razas de perros');
                 console.error(err);
             } finally {
                 setLoading(false);
@@ -36,7 +36,7 @@ const CatsPage = () =>{
     if (loading) {
         return (
           <div className="p-4">
-            <h1 className="text-2xl font-bold mb-4">Razas de Gatos</h1>
+            <h1 className="text-2xl font-bold mb-4">Razas de Perros</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {[...Array(6)].map((_, index) => (
                     <BreedCardSkeleton key={index} />
@@ -56,7 +56,7 @@ const CatsPage = () =>{
 
     return (
         <div className="p-4">
-            <h1 className="text-2xl font-bold mb-4">Razas de Gatos</h1>
+            <h1 className="text-2xl font-bold mb-4">Razas de Perros</h1>
             
             {/* Barra de búsqueda */}
             <div className="mb-6">
@@ -97,4 +97,4 @@ const CatsPage = () =>{
     )
 }
 
-export default CatsPage;
+export default DogsPage;
