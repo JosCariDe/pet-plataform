@@ -17,6 +17,30 @@ const CatsPage = () =>{
             origin: ''
     });
 
+    // Map de temperamentos para pasarlo al componente de BreedFIlter
+    const temperamentOptions = {
+        Active: "Activo",
+        Adaptable: "Adaptable",
+        Affectionate: "Afectuoso",
+        Alert: "Alerta",
+        Calm: "Tranquilo",
+        Confident: "Seguro",
+        Energetic: "Enérgico",
+        Gentle: "Gentil",
+        Friendly: "Amistoso",
+        Independent: "Independiente",
+        Intelligent: "Inteligente",
+        Lively: "Animado",
+        Loving: "Amoroso",
+        Loyal: "Leal",
+        Playful: "Juguetón",
+        Quiet: "Silencioso",
+        Sensitive: "Sensible",
+        Sociable: "Sociable",
+        Vocal: "Maullador"
+    };
+
+
     // Efecto para cargar los datos al montar el componente
     useEffect(() => {
         const fetchBreeds = async () => {
@@ -80,7 +104,7 @@ const CatsPage = () =>{
             <h1 className="text-2xl font-bold mb-4">Razas de Gatos</h1>
             
             {/* Barra de búsqueda */}
-            <BreedFilters onFilterChange={handleFilterChange} />
+            <BreedFilters onFilterChange={handleFilterChange} temperamentOptions={temperamentOptions}/>
 
             {/* Lista de Razas */}
 

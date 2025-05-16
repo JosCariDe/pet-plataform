@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const BreedFilters = ({ onFilterChange }) => {
+const BreedFilters = ({ onFilterChange, temperamentOptions }) => {
   const [filters, setFilters] = useState({
     searchTerm: '',
     temperament: '',
@@ -46,22 +46,9 @@ const BreedFilters = ({ onFilterChange }) => {
             onChange={handleInputChange}
           >
             <option value="">Cualquiera</option>
-            <option value="Active">Activo</option>
-            <option value="Energetic">Energetico</option>
-            <option value="Independent">Independente</option>
-            <option value="Intelligent">Intelligente</option>
-            <option value="Gentle">Gentil</option>
-            <option value="Social">Social</option>
-
-            <option value="Playful">jugueton</option>
-            <option value="Affectionate">Cariñoso</option>
-            <option value="Sensitive">Sensible</option>
-            <option value="Interactive">Interactivo</option>
-            <option value="Lively">Animado</option>
-            <option value="Curious">Curioso</option>
-            <option value="Easy Going">Fácil de llevar</option>
-            <option value="Calm">Calmado</option>
-
+            {Object.entries(temperamentOptions).map(([value, label]) => (
+              <option key={value} value={value}>{label}</option>
+            ))}
           </select>
         </div>
         
