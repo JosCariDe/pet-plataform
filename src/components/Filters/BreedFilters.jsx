@@ -38,15 +38,31 @@ const BreedFilters = ({ onFilterChange }) => {
           <label htmlFor="temperament" className="block text-sm font-medium text-gray-700 mb-1">
             Temperamento
           </label>
-          <input
-            type="text"
+          <select
             id="temperament"
             name="temperament"
-            placeholder="Ej: Amigable, Juguetón..."
             className="w-full p-2 border border-gray-300 rounded"
             value={filters.temperament}
             onChange={handleInputChange}
-          />
+          >
+            <option value="">Cualquiera</option>
+            <option value="Active">Activo</option>
+            <option value="Energetic">Energetico</option>
+            <option value="Independent">Independente</option>
+            <option value="Intelligent">Intelligente</option>
+            <option value="Gentle">Gentil</option>
+            <option value="Social">Social</option>
+
+            <option value="Playful">jugueton</option>
+            <option value="Affectionate">Cariñoso</option>
+            <option value="Sensitive">Sensible</option>
+            <option value="Interactive">Interactivo</option>
+            <option value="Lively">Animado</option>
+            <option value="Curious">Curioso</option>
+            <option value="Easy Going">Fácil de llevar</option>
+            <option value="Calm">Calmado</option>
+
+          </select>
         </div>
         
         <div>
