@@ -4,7 +4,8 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import CatsPage from "./pages/CatsPage";
 import DogsPage from "./pages/DogsPage";
-
+import CatDetailPage from "./pages/CatDetailPage";
+import DogDetailPage from "./pages/DogDetailPage";
 
 const Home = () => <div className="p-4">Home Page</div>
 const FavoritesPage = () => <div className="p-4">Favorites Page</div>
@@ -19,12 +20,13 @@ function App() {
                     <Routes>
                         <Route path="/" element={<Home/>} />
                         <Route path="/gatos" element={<CatsPage/>}/>
+                        <Route path="/gatos/:breedId" element={<CatDetailPage />} />
                         <Route path="/perros" element={<DogsPage/>}/>
+                        <Route path="/perros/:breedId" element={<DogDetailPage />} />
                         <Route path="favoritos" element={<FavoritesPage/>} />
                         <Route path="/matcher" element={<MatcherPage/>}/>
                     </Routes>
                 </main>
-                <Footer />
             </div>
         </Router>
     )
