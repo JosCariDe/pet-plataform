@@ -8,7 +8,7 @@ const BreedCard = ({name, origin , description, image, id, petType}) => {
     return (
         <div className="bg-white rounded-lg shadow-md p-4">
             {image && (
-                <img src={image} alt={name} className="w-full h-48 object-cover rounded mb-4"/>
+                <img src={image} alt={name} className="w-full h-48 object-contain rounded mb-4"/>
             )}
             <div>
                 <div>
