@@ -8,9 +8,9 @@ import CatDetailPage from "./pages/CatDetailPage";
 import DogDetailPage from "./pages/DogDetailPage";
 import UserBar from "./components/UserBar/UserBar";
 import CurrentUserInfo from "./components/UserBar/CurrentUserInfo";
+import FavoritesPage from "./pages/FavoritesPage";
 
 const Home = () => <div className="p-4">Home Page</div>
-const FavoritesPage = () => <div className="p-4">Favorites Page</div>
 const MatcherPage = () => <div className="p-4">Matcher Page</div>
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
                         <Route path="/gatos/:breedId" element={<CatDetailPage />} />
                         <Route path="/perros" element={<DogsPage/>}/>
                         <Route path="/perros/:breedId" element={<DogDetailPage />} />
-                        <Route path="favoritos" element={<FavoritesPage/>} />
+                        <Route path="favoritos" element={<FavoritesPage />} />
                         <Route path="/matcher" element={<MatcherPage/>}/>
                     </Routes>
                 </main>
