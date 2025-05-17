@@ -150,6 +150,8 @@ const DogsPage = () =>{
                             origin={breed.origin || 'Desconocido'}
                             description={breed.description || 'Sin descripcion disponible'}
                             image={breed.image?.url}
+                            id={breed.id}
+                            petType="perros"
                         />
                     )
                 }

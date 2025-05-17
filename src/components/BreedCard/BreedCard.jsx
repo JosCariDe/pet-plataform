@@ -1,6 +1,7 @@
 
+import { Link } from 'react-router-dom';
 
-const BreedCard = ({name, origin , description, image}) => {
+const BreedCard = ({name, origin , description, image, id, petType}) => {
 
 
 
@@ -9,9 +10,20 @@ const BreedCard = ({name, origin , description, image}) => {
             {image && (
                 <img src={image} alt={name} className="w-full h-48 object-cover rounded mb-4"/>
             )}
-            <h3 className="text-lg font-semibold">{name}</h3>
-            <p className="text-gray-600">Origen: {origin}</p>
-            <p className="mt-2">{description}</p>
+            <div>
+                <div>
+                    <h3 className="text-lg font-semibold">{name}</h3>
+                    <p className="text-gray-600">Origen: {origin}</p>
+                    <p className="mt-2">{description}</p>
+                </div>
+                <Link
+                    to={`/${petType}/${id}`}
+                    className="mt-auto bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 text-center block"
+                    >
+                    Ver detalles
+                </Link>
+            </div>
+            
         </div>
     )
 }
