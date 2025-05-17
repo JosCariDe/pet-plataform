@@ -50,7 +50,7 @@ const BreedDetail = ({ breed, petType }) => {
             <img 
               src={images[0].url} 
               alt={breed.name}
-              className="w-full h-64 object-cover rounded-lg" 
+              className="w-full h-64 object-contain rounded-lg" 
             />
           ) : (
             <div className="w-full h-64 bg-gray-200 rounded-lg flex items-center justify-center">
@@ -65,7 +65,7 @@ const BreedDetail = ({ breed, petType }) => {
                 key={index}
                 src={img.url} 
                 alt={`${breed.name} ${index + 1}`}
-                className="w-full h-16 object-cover rounded cursor-pointer" 
+                className="w-full h-16 object-contain rounded cursor-pointer" 
               />
             ))}
           </div>
