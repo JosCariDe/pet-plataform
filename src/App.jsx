@@ -7,6 +7,7 @@ import DogsPage from "./pages/DogsPage";
 import CatDetailPage from "./pages/CatDetailPage";
 import DogDetailPage from "./pages/DogDetailPage";
 import UserBar from "./components/UserBar/UserBar";
+import CurrentUserInfo from "./components/UserBar/CurrentUserInfo";
 
 const Home = () => <div className="p-4">Home Page</div>
 const FavoritesPage = () => <div className="p-4">Favorites Page</div>
@@ -18,6 +19,7 @@ function App() {
             <div className="App">
                 <Header />
                 <UserBar />
+                <CurrentUserInfo />
                 <main className="container mx-auto mt-4">
                     <Routes>
                         <Route path="/" element={<Home/>} />
