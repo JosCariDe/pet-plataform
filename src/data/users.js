@@ -12,7 +12,7 @@ const users = [
     id: "usr_002",
     nombre: "Luis Pérez",
     mascotasFavoritas: [
-      { idMascota: "dog_breed_234", tipoMascota: "perro" },
+      { idMascota: 2, tipoMascota: "perro" },
     ],
     mascotasRecomendadas: [],
   },
